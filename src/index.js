@@ -4,10 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { BrowserRouter } from "react-router-dom";
+import { TodoProvider } from './context/todo';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <TodoProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </TodoProvider>
   </React.StrictMode>
 );
 
